@@ -1,0 +1,102 @@
+/* Universal selector * { color: black;} is not very commonly used, beause it selects everything on the page and changes it all the same */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+/* selector list select all of the listed elements */
+
+h1, h2 {
+    color: #1d3557;
+}
+#signup {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+/* The # signal is to select an ID */
+
+span {
+    color: #457b9d;
+}
+
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+}
+
+/* The . is used to select a class */
+
+/* A Descendant Selector selects all the nested elements. This one can be nested anywhere inside the opening like footer*/
+.post a {
+    color: #457b9d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a {
+    color: #e63946;
+}
+
+/* Ajacent Selector selects only the thing that is immediately preceded by the first selection */
+input + button {
+    background-color: pink;
+}
+
+/* Direct Child selector selects only the things that are direct children of an element */
+footer > a {
+    color: deeppink;
+}
+
+/* Attribute selector: select all input elements where the type attribute is set to "text"
+ input[type="text"] {}, a[href*="example"] is for anchor tags that contain example, a[href$=".org"] is for href that ends in org
+*/
+input[type="password"] {
+    color: red;
+}
+
+/* Pseudo Classes: Keyword added to a selector that specifies a special state of the selected element(s)
+Ex: :active [when a button is clicked], :checked [any boxes checked], :first, :first-child, :hover [while hovered over], 
+:not(), :nth-child(), :nth-of-type() [based on position in group of siblings. Just a number is just that number, 
+but adding an "n" says every 2nd or 3rd or whatever]
+*/
+.post button:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: #02c39a;
+}
+.post:nth-of-type(2n) {
+    background-color: #a6cc9a;
+}
+
+/* Psuedo Elements: Keyword added to a selector that lets you style a particular part of selected element(s)
+: :after, : :before, : :first-letter [changes first letter :v], : :first-line [changes first line :v], : :selection [highlighted] 
+*/
+
+h2::first-letter {
+    font-size: 50px;
+    color: indigo;
+}
+
+p::selection {
+    background-color: lawngreen;
+}
+
+/* Specificity is how the browser decides which rules to apply when mulitple rules could apply to the same element. 
+It is a measure of how specific a given selector is. The more specific selector "wins". IE element vs element + element.
+Inline Style, styles set in the html file is the most specific and will win forever :V (generally avoid inline styles)
+ID is extremely specific and will beat out class and element. Class is more specific than element. ID, Class, Element... 
+If you declare !important at the end of a style, it will override anything and everything else
+*/

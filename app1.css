@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    font-weight: 400;
+    text-decoration: blue wavy underline;
+    letter-spacing: 15px;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* font-weight controls bold to normal text. You can set a number like 400 
+(which is normal) or normal, bold, extra bold, depending on what's available for the specific font type */
+
+/* text-decoration sets the appearance of decorative lines on text, such as underline; underline dotted and so on */
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+/* Setting a text-decoration to none takes away the decoration that's standard, such as a line under links */
+/* line-height sets the distance between the lines */
+
+p {
+    line-height: 2;
+}
+
+body {
+    background-color: rgb(226, 194, 211);
+}
+
+/* letter-spacing controls spacing between text characters*/
+/* when choosing a font-family, you should choose backup fonts because some people might not have that font */
+

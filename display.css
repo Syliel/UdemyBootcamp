@@ -1,0 +1,43 @@
+/* Inline: Width and height are ignored. Margin and padding push elements away horizontally but not vertically.
+Block: Block elements break the flow of a document. Width, height, margin and padding are respected.
+Inline-Block: Behaved like an inline element except width, height, margin and padding are respected. */
+
+/* h1 {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    display: inline;
+}
+
+span {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    display: block;
+} */
+
+span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 50px;
+}
+
+h1 {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    width: 300px;
+    padding: 50px;
+    margin: 50px;
+    display: none;
+}
+
+/* If you set display to none, it will not display the element on the page. Useful if you want to start a website without displaying something till later */
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: olivedrab;
+    border: 5px solid black;
+    display: inline-block;
+    margin: 5px;
+}

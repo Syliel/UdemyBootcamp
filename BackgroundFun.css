@@ -1,0 +1,17 @@
+section {
+    width: 80%;
+    height: 800px;
+    /* background-image: url("D:/UdemyBootcamp/AnimeBackground.jpg");
+    background-size: cover;
+    background-position: top; */
+    background: url("D:/UdemyBootcamp/AnimeBackground.jpg") no-repeat center/40%, url("D:/UdemyBootcamp/Catgirlbackground.jpg");
+    /* if you want to include cover, it must be size separated by /... otherwise, there's no formal order for background
+    Not limited to one background!!!!!!! 
+    Can be a url from the internets or from a file you have on your pc*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+}

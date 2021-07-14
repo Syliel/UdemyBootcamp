@@ -1,0 +1,24 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* In rgba, the a (alpha channel) is only going to affect the background-color (not the text) or wherever you're using it. 
+1 is solid and 0 is completely transparent.
+With Hex numbers such as #00cca0, you use 00 to FF to set transparency */
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.5;
+}
+
+/* Opacity is also from 0 to 1, 0 being completely transparent, but affects the entire element including text and other children */

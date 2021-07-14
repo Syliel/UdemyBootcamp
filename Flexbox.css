@@ -1,0 +1,82 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    /* display: flex; basically turns flexbox "on" */
+    flex-direction: row;
+    /* flex-direction is the direction the content goes across main axis, row is the starter.
+    You can select row-reverse, column or column-reverse */
+    justify-content: center;
+    /* justify-content determines how contents are distributed across main axis. Default is flex-start; flex-end is reverse.
+    justify-content: center; centers it along the main axis
+    space-between takes extra space and distributes it between, but not on outside edges
+    space-around gives all elements same space around them with half on the outside edges
+    space-evenly gives even space all around all elements in the container*/
+    flex-wrap: nowrap;
+    /* flex-wrap can be set to wrap or reverse-wrap and sets the way the elements wrap in the container on the cross axis */
+    align-items: center;
+    /* align-items aligns them on the Cross-Axis. If you align-items to baseline it aligns on the bottom of your text */
+    /* align-content: center; */
+    /* align-content does the same as justify-content, but on the Cross Axis. Only works when there is wrap or wrap-reverse */
+}
+
+/* Flex-Basis: Defines the initial size of an element before additional space is distributed.
+Flex-Grow: Controls the amount of available space an element should take up. Accepts a unit-less number value.
+Flex-Shrink: If items are larger than the container, they shrink according to flex-shrink. */
+
+/* MAIN AXIS is the initial axis, can either be horizontal or vertical, left or right, up or down 
+and then the CROSS AXIS is whatever the opposite is of that*/
+
+#container div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+/* div:nth-of-type(3) {
+    align-self: flex-start;
+} */
+/* align-self targets not the flexbox container, but a specified element. Works on the Cross Axis */
+
+div:nth-of-type(1) {
+    flex-shrink: 2;
+}
+/* if you set flex-shrink to 0, it doesn't shrink
+div:nth-of-type(5) {
+    flex-grow: 2;
+} */
+
+/* flex: allows you to set three values for flex-basis, grow and shrink... 2 is just grow and shrink, one is just grow. 
+If three the syntax is Grow, Shrink, Basis */
+
+h2 {
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+main .sidebar {
+    background-color: purple;
+    border: 2px solid white;
+    flex: 1 2 300px;
+}
+
+main .maincontent {
+    background-color: green;
+    flex: 2 1 800px;
+}

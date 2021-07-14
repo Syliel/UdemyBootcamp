@@ -1,0 +1,20 @@
+h2 {
+    color: #9562C5; 
+    background-color: rgb(75, 200, 175);
+}
+
+button {
+    color: magenta; 
+    background-color: cyan;
+}
+
+p {
+    color: olive;
+    background: orange;
+}
+
+body {
+    background-color: #881d1d;
+}
+
+/* if both color number are the same for each rgb, you can shorten it to just use the number once IE instead of cc55ee just c5e */
