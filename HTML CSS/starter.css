@@ -11,13 +11,16 @@ button {
 
 /* selector list select all of the listed elements */
 
-h1, h2 {
+h1,
+h2 {
     color: #1d3557;
 }
+
 #signup {
     background-color: #1d3557;
     color: #f1faee;
 }
+
 /* The # signal is to select an ID */
 
 span {
@@ -44,12 +47,12 @@ footer a {
 }
 
 /* Ajacent Selector selects only the thing that is immediately preceded by the first selection */
-input + button {
+input+button {
     background-color: pink;
 }
 
 /* Direct Child selector selects only the things that are direct children of an element */
-footer > a {
+footer>a {
     color: deeppink;
 }
 
@@ -77,6 +80,7 @@ but adding an "n" says every 2nd or 3rd or whatever]
 .post button:active {
     background-color: #02c39a;
 }
+
 .post:nth-of-type(2n) {
     background-color: #a6cc9a;
 }
@@ -100,3 +104,10 @@ Inline Style, styles set in the html file is the most specific and will win fore
 ID is extremely specific and will beat out class and element. Class is more specific than element. ID, Class, Element... 
 If you declare !important at the end of a style, it will override anything and everything else
 */
+
+const buttons=document.createElement('button');
+buttons.innerText="Hey!";
+
+for(let i=0; i < 100; i++) {
+    document.body[i].appendChild(buttons);
+}

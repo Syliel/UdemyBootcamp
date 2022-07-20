@@ -1,0 +1,74 @@
+.navbar {
+    background-color: var(--bs-pink);
+}
+
+.banner {
+    background-color: var(--bs-purple);
+}
+
+.lister {
+    margin-top: 200px;
+    margin-bottom: 10px;
+
+}
+
+
+body {
+    background-color: rgb(234, 248, 248);
+}
+
+.anime-image {
+    border-radius: 50%;
+}
+
+input,
+label {
+    display: block;
+
+}
+
+.form-stuff {
+
+    background-color: lightgrey;
+    width: 800px;
+    height: 350px;
+    padding-top: 1em;
+
+}
+
+.form-title {
+    width: 800px;
+    margin-top: 50px;
+
+}
+
+.form-stuff-title {
+
+    background-color: lightgrey;
+    width: 800px;
+    height: 200px;
+    padding-top: 1em;
+
+}
+
+.form-stuff-title2 {
+
+    background-color: lightgrey;
+    width: 800px;
+    height: 100px;
+    padding-top: 1em;
+
+}
+
+.random-h5 {
+    margin-top: 7px;
+}
+
+.btn-success {
+    margin-top: 30px;
+}
+
+.carousel-item {
+
+    height: 260px
+}
