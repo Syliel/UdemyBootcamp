@@ -66,9 +66,14 @@ label {
 
 .btn-success {
     margin-top: 30px;
+    width: 300px;
 }
 
 .carousel-item {
 
     height: 260px
+}
+
+.endspace {
+    margin-top: 100px;
 }

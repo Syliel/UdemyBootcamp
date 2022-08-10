@@ -4,115 +4,145 @@
         <%- include('partials/banner')%>
 
             <div class="container-fluid">
-                <form action="/anime" method="POST">
-                    <h2>Submission Form:</h2>
-                    <h5 class="container form-title">Title:</h5>
-                    <section class="container form-stuff-title">
-
-                        <div>
-                            <label for="title" class="form-label">English (Licensed):</label>
-                            <input type="text" class="form-control" id="title" name="title[english]">
-                        </div>
-                        <div>
-                            <label for="title-romaji" class="form-label">Romaji:</label>
-                            <input type="text" class="form-control" id="title-romaji" name="title[romaji]">
-                        </div>
-                    </section>
-                    <h5 class="container form-title">Release Data:</h5>
-                    <section class="container form-stuff">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="status" class="form-label">Release Status:</label>
-                                <select type="text" class="form-control form-select" id="status"
-                                    name="releaseData[status]" required="true">
-                                    <option selected>Select</option>
-                                    <option value="Finished Releasing">Finished Releasing</option>
-                                    <option value="Currently Releasing">Currently Releasing</option>
-                                    <option value="Not Yet Released">Not Yet Released</option>
-                                    <option value="Cancelled">Cancelled</option>
-                                    <option value="Hiatus">Hiatus</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <label for="season" class="form-label">Season:</label>
-                                <select type="text" class="form-control form-select" id="season"
-                                    name="releaseData[season]" required="true">
-                                    <option selected>Select</option>
-                                    <option value="Fall">Fall</option>
-                                    <option value="Summer">Summer</option>
-                                    <option value="Spring">Spring</option>
-                                    <option value="Winter">Winter</option>
-                                </select>
-                            </div>
-                            <p class="random-h5"><b>Start Date:</b></p>
-                            <div class="col-4">
-                                <label for="year" class="form-label">Year</label>
-                                <input type="number" class="form-control id=" year" name="releaseData[startDate[year]]"
-                                    min="1000" max="3000">
-                            </div>
-                            <div class="col-4">
-                                <label for="month" class="form-label">Month</label>
-                                <input type="number" class="form-control id=" month"
-                                    name="releaseData[startDate[month]]" min="1" max="12">
-                            </div>
-                            <div class="col-4">
-                                <label for="day" class="form-label">Day</label>
-                                <input type="number" class="form-control id=" day" name="releaseData[startDate[day]]"
-                                    min="1" max="31">
-                            </div>
-                            <p class="random-h5"><b>End Date:</b></p>
-                            <div class="col-4">
-                                <label for="year" class="form-label">Year</label>
-                                <input type="number" class="form-control id=" year" name="releaseData[endDate[year]]"
-                                    min="1000" max="3000">
-                            </div>
-                            <div class="col-4">
-                                <label for="month" class="form-label">Month</label>
-                                <input type="number" class="form-control id=" month" name="releaseData[endDate[month]]"
-                                    min="1" max="12">
-                            </div>
-                            <div class="col-4">
-                                <label for="day" class="form-label">Day</label>
-                                <input type="number" class="form-control id=" day" name="releaseData[endDate[day]]"
-                                    min="1" max="31">
-                            </div>
-                        </div>
-                    </section>
-                    <h5 class="container form-title">Genre:</h5>
-                    <section class="container form-stuff-title2">
-                        <div>
-                            <label for="genre" class="form-label">Choose a genre:</label>
-                            <select type="text" class="form-control form-select" id="genre" name="genres"
-                                required="true">
-                                <option selected>Select</option>
-                                <option value="Action">Action</option>
-                                <option value="Adventure">Adventure</option>
-                                <option value="Comedy">Comedy</option>
-                                <option value="Drama">Drama</option>
-                                <option value="Ecchi">Ecchi</option>
-                                <option value="Fantasy">Fantasy</option>
-                                <option value="Hentai">Hentai</option>
-                                <option value="Horror">Horror</option>
-                                <option value="Slice of Life">Slice of Life</option>
-                            </select>
-                        </div>
-                    </section>
-                    <h5 class="container form-title">Description:</h5>
-                    <section class="container form-stuff-title2">
-                        <div class="form-floating">
-                            <textarea name="description" id="floatingTextarea2" cols="100" rows="2"></textarea>
-                        </div>
-                    </section>
-                    <h5 class="container form-title">Image:</h5>
-                    <section class="container form-stuff-title2">
-                        <label for="image">JPG/PNG</label>
-                        <input type="text" class="form-control" id="image" name="image" placeholder="Enter a url">
-                    </section>
-                    <div class="row justify-content-end">
-                        <button class="btn col-1 btn-success">Submit</button>
+                <div class="row">
+                    <div class="col">
+                        <img src="/images/sidebar.png" alt="">
                     </div>
 
-                </form>
+                    <div class="col-6">
+                        <form action="/anime" method="POST">
+
+                            <h2 class="row">Submission Form:</h2>
+                            <h5 class="row form-title">Title:</h5>
+
+                            <section class="row form-stuff-title">
+
+
+                                <div>
+                                    <label for="title" class="form-label">English (Licensed):</label>
+                                    <input type="text" class="form-control" id="title" name="title[english]">
+                                </div>
+                                <div>
+                                    <label for="title-romaji" class="form-label">Romaji:</label>
+                                    <input type="text" class="form-control" id="title-romaji" name="title[romaji]">
+                                </div>
+                            </section>
+                            <h5 class="row form-title">Release Data:</h5>
+                            <section class="row form-stuff">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="status" class="form-label">Release Status:</label>
+                                        <select type="text" class="form-control form-select" id="status"
+                                            name="releaseData[status]" required="true">
+                                            <option selected>Select</option>
+                                            <option value="Finished Releasing">Finished Releasing</option>
+                                            <option value="Currently Releasing">Currently Releasing</option>
+                                            <option value="Not Yet Released">Not Yet Released</option>
+                                            <option value="Cancelled">Cancelled</option>
+                                            <option value="Hiatus">Hiatus</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="season" class="form-label">Season:</label>
+                                        <select type="text" class="form-control form-select" id="season"
+                                            name="releaseData[season]" required="true">
+                                            <option selected>Select</option>
+                                            <option value="Fall">Fall</option>
+                                            <option value="Summer">Summer</option>
+                                            <option value="Spring">Spring</option>
+                                            <option value="Winter">Winter</option>
+                                        </select>
+                                    </div>
+                                    <p class="random-h5"><b>Start Date:</b></p>
+                                    <div class="col">
+                                        <label for="year" class="form-label">Year</label>
+                                        <input type="number" class="form-control id=" year"
+                                            name="releaseData[startDate[year]]" min="1000" max="3000">
+                                    </div>
+                                    <div class="col">
+                                        <label for="month" class="form-label">Month</label>
+                                        <input type="number" class="form-control id=" month"
+                                            name="releaseData[startDate[month]]" min="1" max="12">
+                                    </div>
+                                    <div class="col">
+                                        <label for="day" class="form-label">Day</label>
+                                        <input type="number" class="form-control id=" day"
+                                            name="releaseData[startDate[day]]" min="1" max="31">
+                                    </div>
+                                    <p class="random-h5"><b>End Date:</b></p>
+                                    <div class="col">
+                                        <label for="year" class="form-label">Year</label>
+                                        <input type="number" class="form-control id=" year"
+                                            name="releaseData[endDate[year]]" min="1000" max="3000">
+                                    </div>
+                                    <div class="col">
+                                        <label for="month" class="form-label">Month</label>
+                                        <input type="number" class="form-control id=" month"
+                                            name="releaseData[endDate[month]]" min="1" max="12">
+                                    </div>
+                                    <div class="col">
+                                        <label for="day" class="form-label">Day</label>
+                                        <input type="number" class="form-control id=" day"
+                                            name="releaseData[endDate[day]]" min="1" max="31">
+                                    </div>
+                                </div>
+                            </section>
+                            <h5 class="row form-title">Genre:</h5>
+                            <section class="row form-stuff-title2">
+                                <div>
+                                    <label for="genre" class="form-label">Choose a genre:</label>
+                                    <select type="text" class="form-control form-select" id="genre" name="genres"
+                                        required="true">
+                                        <option selected>Select</option>
+                                        <option value="Action">Action</option>
+                                        <option value="Adventure">Adventure</option>
+                                        <option value="Comedy">Comedy</option>
+                                        <option value="Drama">Drama</option>
+                                        <option value="Ecchi">Ecchi</option>
+                                        <option value="Fantasy">Fantasy</option>
+                                        <option value="Hentai">Hentai</option>
+                                        <option value="Horror">Horror</option>
+                                        <option value="Slice of Life">Slice of Life</option>
+                                    </select>
+                                </div>
+                            </section>
+                            <h5 class="row form-title">Description:</h5>
+                            <section class="row form-stuff-title2">
+                                <div class="form-floating">
+                                    <textarea name="description" id="floatingTextarea2" cols="100" rows="2"></textarea>
+                                </div>
+                            </section>
+                            <h5 class="row form-title">Image:</h5>
+                            <section class="row form-stuff-title2">
+                                <label for="image">JPG/PNG</label>
+                                <input type="text" class="form-control" id="image" name="image"
+                                    placeholder="Enter a url">
+                            </section>
+                            <div class="row">
+                                <button class="btn col-1 btn-success">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-2">
+                        <div class="row ">
+                            <img src="/images/leftside1.png" alt="">
+                        </div>
+                        <div class="row ">
+                            <img src="/images/leftside2.png" alt="">
+                        </div>
+                        <div class="row">
+                            <img src="/images/leftside3.png" alt="">
+                        </div>
+                        <div class="row">
+                            <img src="/images/leftside4.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="endspace">
+
+                    </div>
+                </div>
 
 
             </div>
